@@ -85,25 +85,38 @@ function Hero({ projectsRef }) {
         clean UI, and real-world problem solving.
       </motion.p>
 
+      {/* --- Buttons Section --- */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="flex gap-4"
+        className="flex gap-4 flex-wrap justify-center"
       >
+        {/* View Projects Button */}
         <button
           onClick={() => scrollToSection(projectsRef)}
-          className="px-6 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 transition"
+          className="px-6 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 transition flex items-center gap-2"
         >
-          View Projects
+          View Projects <FaArrowDown />
         </button>
 
+        {/* GitHub Button */}
         <a
           href="https://github.com/006deekshi"
           target="_blank"
-          className="px-6 py-2 rounded-full border border-neutral-700 hover:border-indigo-500"
+          rel="noopener noreferrer"
+          className="px-6 py-2 rounded-full border border-neutral-700 hover:border-indigo-500 flex items-center gap-2"
         >
-          GitHub
+          <FaGithub /> GitHub
+        </a>
+
+        {/* Resume Download Button */}
+        <a
+          href="/Deekshitha-resume.pdf"
+          download
+          className="px-6 py-2 rounded-full bg-green-600 hover:bg-green-700 transition flex items-center gap-2"
+        >
+          <FaDownload /> Resume
         </a>
       </motion.div>
     </section>
@@ -119,7 +132,7 @@ function AboutMe() {
       <div className="text-neutral-200 text-lg">
         <ul className="list-disc list-inside space-y-1">
           <li>
-            Second-year B.Tech Computer Science student at SRM University (<span className="font-semibold">GPA: 9.0</span>)
+            Third-year B.Tech Computer Science student at SRM University (<span className="font-semibold">GPA: 9.0</span>)
           </li>
           <li>Strong foundation in Data Structures, OOP, REST APIs</li>
           <li>Interested in Full-Stack Development and AI/ML systems</li>
@@ -195,7 +208,7 @@ function Projects() {
     },
     {
       title: "Smart Task Manager",
-      desc: "Task manager with authentication, CRUD operations, and efficient state management.",
+      desc: "Task manager with CRUD operations, and efficient state management.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
       github: "https://github.com/006deekshi/Taskify",
       live: "https://soft-caramel-68939b.netlify.app/"
