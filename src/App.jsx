@@ -209,7 +209,7 @@ function Projects() {
     {
       title: "Smart Task Manager",
       desc: "Task manager with CRUD operations, and efficient state management.",
-      tech: ["React", "Node.js", "Express", "MongoDB"],
+      tech: ["HTML", "CSS", "Java Script", "Local Storage"],
       github: "https://github.com/006deekshi/Taskify",
       live: "https://soft-caramel-68939b.netlify.app/"
     },
